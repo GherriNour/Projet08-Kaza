@@ -1,0 +1,15 @@
+ .rate {
+      @include flex-end;
+      margin-top: 20px;
+
+      .star {
+        width: 15px;
+        height: 15px;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  

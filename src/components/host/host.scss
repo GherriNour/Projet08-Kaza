@@ -1,0 +1,29 @@
+.host {
+    @extend %flex-rowReverse;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__name-prop {
+      @extend %flex-rowCenter;
+
+      .name-host {
+        @include font(18px, 500);
+        margin-right: 10px;
+        text-align: right;
+        width: 93px;
+        color: #ff6060;
+      }
+
+      .photo-host {
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+      }
+    }
+}

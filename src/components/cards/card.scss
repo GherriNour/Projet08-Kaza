@@ -1,0 +1,45 @@
+.card {
+  width: 100%;
+  height: 255px;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  
+
+
+  &_img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;//  redimensionne le contenu de l'élément pour couvrir entièrement le conteneur
+    border-radius: inherit;// Hérite du border-radius du parent
+   
+  }
+
+  &_title {
+    position: absolute;
+    bottom: 0;
+    @include font(18px, 500);
+    margin: 15px 20px;
+    color: #ffffff;
+    box-sizing: inherit;
+  }
+
+  &_overlay {
+    position: absolute;
+    top: 0;
+    @include linear-gradient; // Inclusion d'un mixin pour le dégradé linéaire
+    height: 100%;
+    width: 100%;
+    border-radius: inherit; // Hérite du border-radius du parent
+
+  }
+
+  // Style au survol de l'élément
+  &:hover {
+    .card_img {
+      transform: scale(1.01); // Agrandit légèrement l'image à 101% de sa taille normale
+    }
+  }
+
+}
+
